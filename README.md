@@ -7,6 +7,7 @@ form field utilities
 
 - [Requirements](#requirements)
 - [Usage](#usage)
+- [Contributes](#contributes)
 - [License](#license)
 
 ## Requirements
@@ -22,6 +23,28 @@ form field utilities
 
 ```
 $ elm install getto-systems/elm-field
+```
+
+
+## Contributes
+
+### Test
+
+fix codes, and pass tests
+
+```
+$ npm test
+```
+
+
+### Update
+
+run `bin/bump.sh`, and create release-request
+
+```
+$ ./bin/bump.sh
+$ git add elm.json
+$ git release-request exact "RELEASE MESSAGE"
 ```
 
 
