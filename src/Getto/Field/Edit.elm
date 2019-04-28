@@ -46,9 +46,14 @@ module Getto.Field.Edit exposing
       ( options |> ( ( name_,  get_name  ) |> Conflict.single [ fields.name |> V.blank ] ) )
     )
     |> Edit.view
+      { data = "data"
+      }
     {-
       { isStatic = True
       , state = HasError
+      , data =
+        { data = "data"
+        }
       , form =
         { name =
           ( "name"
@@ -95,9 +100,10 @@ type Form response fields = Form (State response) fields
 
 {-| isStatic, state (HasError, HasModified) and form
  -}
-type alias View model =
+type alias View data model =
   { isStatic : Bool
   , state    : AggregateState
+  , data     : data
   , form     : model
   }
 
@@ -198,9 +204,10 @@ options opts =
       )
       |> Edit.view
  -}
-view : ( Bool, Conflict.View model ) -> View model
-view (isStatic,conflictView) =
+view : data -> ( Bool, Conflict.View model ) -> View data model
+view data (isStatic,conflictView) =
   { isStatic = isStatic
+  , data = data
   , form = conflictView.form
   , state =
     if conflictView.hasError
