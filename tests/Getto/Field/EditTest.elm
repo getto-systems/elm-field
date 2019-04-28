@@ -59,9 +59,14 @@ suite =
               ( options |> ( ( name_, get_name ) |> Conflict.single [ fields.name |> blank ] ) )
             )
             |> Edit.view
+              { data = "data"
+              }
             |> Expect.equal
               { isStatic = True
               , state = Edit.Same
+              , data =
+                { data = "data"
+                }
               , form =
                 { name =
                   ( "name"
@@ -106,9 +111,14 @@ suite =
               ( options |> ( ( name_, get_name ) |> Conflict.single [ fields.name |> blank ] ) )
             )
             |> Edit.view
+              { data = "data"
+              }
             |> Expect.equal
               { isStatic = False
               , state = Edit.Same
+              , data =
+                { data = "data"
+                }
               , form =
                 { name =
                   ( "name"
@@ -153,9 +163,14 @@ suite =
               ( options |> ( ( name_, get_name ) |> Conflict.single [ fields.name |> blank ] ) )
             )
             |> Edit.view
+              { data = "data"
+              }
             |> Expect.equal
               { isStatic = True
               , state = Edit.Same
+              , data =
+                { data = "data"
+                }
               , form =
                 { name =
                   ( "name"
@@ -200,9 +215,14 @@ suite =
               ( options |> ( ( name_, get_name ) |> Conflict.single [ fields.name |> blank ] ) )
             )
             |> Edit.view
+              { data = "data"
+              }
             |> Expect.equal
               { isStatic = False
               , state = Edit.HasModified
+              , data =
+                { data = "data"
+                }
               , form =
                 { name =
                   ( "name"
@@ -247,9 +267,14 @@ suite =
               ( options |> ( ( name_, get_name ) |> Conflict.single [ fields.name |> blank ] ) )
             )
             |> Edit.view
+              { data = "data"
+              }
             |> Expect.equal
               { isStatic = False
               , state = Edit.HasError
+              , data =
+                { data = "data"
+                }
               , form =
                 { name =
                   ( "name"
@@ -294,9 +319,14 @@ suite =
               ( options |> ( ( name_, get_name ) |> Conflict.single [ fields.name |> blank ] ) )
             )
             |> Edit.view
+              { data = "data"
+              }
             |> Expect.equal
               { isStatic = False
               , state = Edit.HasError
+              , data =
+                { data = "data"
+                }
               , form =
                 { name =
                   ( "name"
@@ -341,9 +371,14 @@ suite =
               ( options |> ( ( name_, get_name ) |> Conflict.single [ fields.name |> blank ] ) )
             )
             |> Edit.view
+              { data = "data"
+              }
             |> Expect.equal
               { isStatic = False
               , state = Edit.HasModified
+              , data =
+                { data = "data"
+                }
               , form =
                 { name =
                   ( "name"
@@ -388,9 +423,14 @@ suite =
               ( options |> ( ( name_, get_name ) |> Conflict.single [ fields.name |> blank ] ) )
             )
             |> Edit.view
+              { data = "data"
+              }
             |> Expect.equal
               { isStatic = True
               , state = Edit.HasModified
+              , data =
+                { data = "data"
+                }
               , form =
                 { name =
                   ( "name"
@@ -435,9 +475,14 @@ suite =
               ( options |> ( ( name_, get_name ) |> Conflict.single [ fields.name |> blank ] ) )
             )
             |> Edit.view
+              { data = "data"
+              }
             |> Expect.equal
               { isStatic = False
               , state = Edit.HasModified
+              , data =
+                { data = "data"
+                }
               , form =
                 { name =
                   ( "name"
